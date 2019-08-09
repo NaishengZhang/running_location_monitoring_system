@@ -1,13 +1,20 @@
 package demo.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
+
+import javax.persistence.Embeddable;
 
 /**
  * @ClassName: UnitInfo
  * @Description: Running Informati on
  */
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
+@Embeddable
+
 public class UnitInfo {
 
     private final String runningId;

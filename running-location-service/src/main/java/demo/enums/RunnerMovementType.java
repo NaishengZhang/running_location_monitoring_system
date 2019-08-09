@@ -1,6 +1,6 @@
 package demo.enums;
 
-public enum Location {
+public enum RunnerMovementType {
     STOPPED, IN_MOTION;
 
     public boolean isMoving() {
