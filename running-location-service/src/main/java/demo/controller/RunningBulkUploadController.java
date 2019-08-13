@@ -28,8 +28,8 @@ public class RunningBulkUploadController {
 
     @RequestMapping(value = "/running/{movementType}", method = RequestMethod.GET)
     public Page<Location> findByMovementType(@PathVariable String movementType,
-                                             @RequestParam(name = "page") int page,
-                                             @RequestParam(name = "size") int size) {
+                                             @RequestParam(name = "page", required = false) Integer page,
+                                             @RequestParam(name = "size", required = false) Integer size) {
         System.out.println(movementType);
         PageRequest pageRequest = new PageRequest(page, size);
         return locationService.findByRunnerMovementType(movementType, pageRequest);
